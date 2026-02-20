@@ -1,0 +1,250 @@
+/* ============================================
+   焚而不燬 — nectamen.com
+   Memorial Hall Landing Page
+   ============================================ */
+
+/* --- Custom Properties --- */
+:root {
+  --bg-dark: #1a1a1a;
+  --bg-card: #2d2d2d;
+  --text-primary: #e8e4df;
+  --text-muted: #a09a92;
+  --accent-amber: #c4721a;
+  --accent-gold: #8b7355;
+  --accent-glow: rgba(196, 114, 26, 0.15);
+  --font-serif: 'Noto Serif TC', 'Georgia', serif;
+  --font-sans: 'Noto Sans TC', 'Helvetica Neue', sans-serif;
+  --font-latin: 'Playfair Display', 'Georgia', serif;
+}
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.8;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --- Hero Section --- */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 4rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero__glow {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 400px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(196, 114, 26, 0.12) 0%,
+    rgba(196, 114, 26, 0.05) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.hero__subtitle {
+  font-family: var(--font-latin);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+}
+
+.hero__tagline {
+  font-family: var(--font-sans);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* --- Introduction --- */
+.intro {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 2;
+}
+
+/* --- Timeline --- */
+.timeline {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- Case Card --- */
+.case {
+  display: grid;
+  grid-template-columns: 80px 1fr 40px;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: var(--bg-card);
+  border: 1px solid rgba(139, 115, 85, 0.2);
+  border-radius: 2px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case:hover,
+.case:focus-visible {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 30px var(--accent-glow);
+  outline: none;
+}
+
+.case__year {
+  font-family: var(--font-latin);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-amber);
+  text-align: center;
+}
+
+.case__body {
+  min-width: 0;
+}
+
+.case__title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.case__name {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+  margin-bottom: 0.3rem;
+}
+
+.case__desc {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.case__arrow {
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+  opacity: 0.4;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  text-align: center;
+}
+
+.case:hover .case__arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* --- Footer --- */
+.footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(139, 115, 85, 0.15);
+}
+
+.footer__source {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.footer__meta {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+}
+
+.footer__meta a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer__meta a:hover {
+  color: var(--text-primary);
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  .case {
+    grid-template-columns: 60px 1fr 30px;
+    padding: 1.2rem 1rem;
+    gap: 1rem;
+  }
+
+  .case__year {
+    font-size: 1.2rem;
+  }
+
+  .case__title {
+    font-size: 1.1rem;
+  }
+}
+
+/* --- Accessibility --- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-amber);
+  outline-offset: 2px;
+}
