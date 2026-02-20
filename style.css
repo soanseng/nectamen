@@ -96,6 +96,17 @@ a {
   margin-bottom: 1.5rem;
 }
 
+.hero__annotation {
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.03em;
+  line-height: 1.8;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+  opacity: 0.85;
+}
+
 .hero__tagline {
   font-family: var(--font-sans);
   font-size: clamp(0.9rem, 2vw, 1.1rem);
