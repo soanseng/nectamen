@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>OG Image — 焚而不燬</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&family=Playfair+Display:ital,wght@1,700&display=swap">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+    }
+
+    .frame {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      background: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+
+    /* Amber glow behind title */
+    .glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -54%);
+      width: 560px;
+      height: 420px;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(196, 114, 26, 0.22) 0%,
+        rgba(196, 114, 26, 0.10) 35%,
+        transparent 70%
+      );
+      pointer-events: none;
+    }
+
+    .title {
+      position: relative;
+      font-family: 'Noto Serif TC', 'Georgia', serif;
+      font-size: 128px;
+      font-weight: 700;
+      color: #e8e4df;
+      letter-spacing: 0.18em;
+      line-height: 1;
+      margin-bottom: 28px;
+    }
+
+    .subtitle {
+      position: relative;
+      font-family: 'Playfair Display', 'Georgia', serif;
+      font-size: 36px;
+      font-weight: 700;
+      font-style: italic;
+      color: #8b7355;
+      letter-spacing: 0.06em;
+      margin-bottom: 22px;
+    }
+
+    .tagline {
+      position: relative;
+      font-family: 'Noto Serif TC', 'Georgia', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: #a09a92;
+      letter-spacing: 0.12em;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="glow"></div>
+    <h1 class="title">焚而不燬</h1>
+    <p class="subtitle">Nec Tamen Consumebatur</p>
+    <p class="tagline">台灣民主化關鍵十年 1980–1989</p>
+  </div>
+</body>
+</html>
